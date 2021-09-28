@@ -6,15 +6,15 @@ async function loadBirds() {
   const loader = new GLTFLoader();
 
   const [parrotData, flamingoData, storkData] = await Promise.all([
-    loader.loadAsync('https://github.com/jjhay-bot/bird/blob/main/assets/models/Parrot.glb?raw=true'),
-    loader.loadAsync('https://github.com/jjhay-bot/bird/blob/main/assets/models/Flamingo.glb?raw=true'),
-    loader.loadAsync('https://github.com/jjhay-bot/bird/blob/main/assets/models/Stork.glb?raw=true'),
+    loader.loadAsync('../../../../assets/models/Parrot.glb'),
+    loader.loadAsync('../../../../assets/models/Flamingo.glb'),
+    loader.loadAsync('../../../../assets/models/Stork.glb'),
   ]);
 
   console.log('Squaaawk!', parrotData);
 
   const parrot = setupModel(parrotData);
-  parrot.position.set(0, 0, -12.5);
+  parrot.position.set(0, 0, -2.5);
 
   const flamingo = setupModel(flamingoData);
   flamingo.position.set(7.5, 0, -10);
