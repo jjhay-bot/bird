@@ -32,7 +32,9 @@ class World {
   
   async init() {
     const { parrot, flamingo, stork } = await loadBirds();
-  
+    
+    loop.updatables.push(parrot, flamingo, stork);
+
     scene.add(parrot, flamingo, stork);
   }
 
